@@ -1,17 +1,23 @@
 <script lang="ts">
     type Colors =
-        | 'original-light-gray'
-        | 'original-purple'
-        | 'original-light-purple'
-        | 'original-gray';
+        | 'bg-original-light-gray'
+        | 'bg-original-purple'
+        | 'bg-original-light-purple'
+        | 'bg-original-gray';
 
     export let background: Colors;
-    export let onClick: any;
+    export let onClickRoute: string;
 </script>
 
 <button
-    on:click={onClick}
-    class="bg-{background} text-white shadow-md font-prompt font-bold"
+    class="{background} text-white shadow-lg font-prompt p-3 pl-10 pr-10 rounded-xl mr-12"
 >
-    <slot />
+    <a
+        href={onClickRoute}
+        class="text-2xl {background == 'bg-original-light-gray'
+            ? 'font-'
+            : 'font-bold'}"
+    >
+        <slot />
+    </a>
 </button>
