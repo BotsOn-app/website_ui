@@ -1,16 +1,28 @@
 <script>
+    import Button from '$lib/components/utils/Button.svelte';
     import Text from '$lib/components/utils/Text.svelte';
 </script>
 
-<section class="flex justify-between items-center">
-    <div class="ml-[12vw]">
+<section class="flex justify-between items-center leading-tight">
+    <div class="ml-[12vw] w-[800px]">
         <h1 class="hero-section-title mb-10">
-            Create your<br /> discord bot without<br /> knowing to code!
+            Create your <br /> discord bot without knowing to code!
         </h1>
-        <Text fontWeight="normal" fontSize="7xl"
+        <Text fontWeight="font-normal" fontSize="text-2xl"
             >Create a discord bot with an ingenious extension system, specially
-            made by BotsOn</Text
-        >
+            made by BotsOn.
+        </Text>
+        <div class="mt-12 flex">
+            <Button background="bg-original-purple" onClickRoute="/downloads">
+                Download
+            </Button>
+            <Button
+                background="bg-original-light-gray"
+                onClickRoute="/extensions"
+            >
+                All Extensions
+            </Button>
+        </div>
     </div>
     <img src="/hero-rightpart.svg" alt="" class="" />
 </section>
