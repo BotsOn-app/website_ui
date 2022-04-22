@@ -14,6 +14,23 @@
     </div>
     <img src="/hero-rightpart.svg" alt="" class="" />
 </section>
+<section class="flex justify-center items-center h-36 w-full">
+    <div class="flex justify-around items-center w-3/5 h-full">
+        <div class="flex justify-center items-center flex-col">
+            <Text fontWeight="font-bold" fontSize="text-4xl">200</Text>
+            <Text fontSize="text-2xl">Bots created</Text>
+        </div>
+        <div class="flex justify-center items-center flex-col">
+            <Text fontWeight="font-bold" fontSize="text-4xl">100</Text>
+            <Text fontSize="text-2xl">Downloads</Text>
+        </div>
+        <div class="flex justify-center items-center flex-col">
+            <Text fontWeight="font-bold" fontSize="text-4xl">14</Text>
+            <Text fontSize="text-2xl">Extensions</Text>
+        </div>
+    </div>
+</section>
+<section />
 
 <style>
     .hero-section-title {
