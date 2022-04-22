@@ -11,8 +11,10 @@
         | 'bold'
         | 'extrabold'
         | 'black';
+
+    export let fontSize: string;
 </script>
 
-<p class="font-prompt font-{fontWeight} text-white">
+<p class="font-prompt font-{fontWeight} text-white text-{fontSize}">
     <slot />
 </p>
