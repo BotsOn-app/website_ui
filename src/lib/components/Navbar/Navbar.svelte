@@ -11,7 +11,7 @@
     ];
 </script>
 
-<div class="flex justify-center items-center w-full">
+<div class="flex justify-center items-center w-full absolute">
     <div class="flex justify-between items-center w-4/5">
         <Logo />
         <NavigationList>
