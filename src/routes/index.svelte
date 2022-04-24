@@ -3,7 +3,7 @@
     import Text from '$lib/components/utils/Text.svelte';
 </script>
 
-<section class="flex justify-between items-center leading-tight">
+<section class="flex justify-between items-center leading-tight pt-16">
     <div class="ml-[12vw] w-[800px]">
         <h1 class="hero-section-title mb-10">
             Create your <br /> discord bot without knowing to code!
