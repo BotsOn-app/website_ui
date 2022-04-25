@@ -13,7 +13,7 @@
 
 <div class="flex justify-center items-center w-full absolute">
     <div class="flex justify-between items-center w-4/5">
-        <Logo />
+        <a href="/"><Logo /></a>
         <NavigationList>
             <DrawerItem text="Downloads" drawerContent={routes} />
             <Item text="Extensions" to="/extensions" />
