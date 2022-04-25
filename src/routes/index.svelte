@@ -13,12 +13,12 @@
             made by BotsOn.
         </Text>
         <div class="mt-12 flex">
-            <Button background="bg-original-purple" onClickRoute="/downloads">
+            <Button type="primary" to="/downloads">
                 Download
             </Button>
             <Button
-                background="bg-original-light-gray"
-                onClickRoute="/extensions"
+                type="lightSecondary"
+                to="/extensions"
             >
                 All Extensions
             </Button>
