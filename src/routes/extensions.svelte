@@ -7,7 +7,7 @@
         {
             id: 1,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'VoiceTemp',
                 description:
                     'This is a base description that says nothing but whatever: voicetemp',
@@ -17,7 +17,7 @@
         {
             id: 2,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'Music',
                 description:
                     'This is a base description that says nothing but whatever: music',
@@ -27,7 +27,7 @@
         {
             id: 3,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'Fake',
                 description:
                     'This is a base description that says nothing but whatever: fake',
@@ -47,8 +47,8 @@
     </div>
 </section>
 <main class="flex justify-center items-center flex-col">
-    <section id="trends" class="w-4/5 mt-8">
-        <div class="flex flex-row justify-center items-center w-fit">
+    <section id="trends" class="w-fit mt-16">
+        <div class="flex flex-row justify-center items-center w-fit mb-4">
             <img src="/trophy-icon.svg" alt="Trophy icon, standing for the trends" />
             <Text fontSize='text-5xl' fontWeight='font-bold'>Trends :</Text>
         </div>
@@ -59,12 +59,13 @@
                     description={db.data.description}
                     bannerUrl={db.data.bannerUrl}
                     id={db.id}
+                    isVerified={db.data.verified}
                 />
             {/each}
         </Grid>
     </section>
-    <section id="all" class="w-4/5 mt-12">
-        <div class="flex flex-row justify-center items-center w-fit">
+    <section id="all" class="w-fit mt-20">
+        <div class="flex flex-row justify-center items-center w-fit mb-4">
             <img src="/puzzle-icon.svg" alt="Puzzle icon, standing for all the extensions" class="mr-8" />
             <Text fontSize='text-5xl' fontWeight='font-bold'>All Extensions :</Text>
         </div>
@@ -75,6 +76,7 @@
                     description={db.data.description}
                     bannerUrl={db.data.bannerUrl}
                     id={db.id}
+                    isVerified={db.data.verified}
                 />
             {/each}
         </Grid>
