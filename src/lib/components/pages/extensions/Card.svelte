@@ -7,7 +7,7 @@
     export let id: number;
 </script>
 
-<div>
+<div class="w-[358px] h-[190px] rounded-lg">
     <div id="text">
         <div>
             <Text>{name}</Text>
@@ -16,7 +16,8 @@
         <Text>{description}</Text>
     </div>
     <div id="round">
-        <a href="/extensions/{id}"></a>
+        <!-- svelte-ignore a11y-missing-content -->
+        <a href="/extensions/{id}" class="rounded-full bg-original-purple w-16 h-16 absolute" />
     </div>
     <div id="image" class="bg-[url('{bannerUrl}')]" />
 </div>

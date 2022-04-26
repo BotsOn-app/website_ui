@@ -11,6 +11,7 @@
                 name: 'VoiceTemp',
                 description:
                     'This is a base description that says nothing but whatever: voicetemp',
+                verified: true,
             },
         },
         {
@@ -20,6 +21,7 @@
                 name: 'Music',
                 description:
                     'This is a base description that says nothing but whatever: music',
+                verified: false,    
             },
         },
         {
@@ -29,6 +31,7 @@
                 name: 'Fake',
                 description:
                     'This is a base description that says nothing but whatever: fake',
+                verified: false,    
             },
         },
     ];
@@ -44,9 +47,9 @@
     </div>
 </section>
 <section id="trends">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>Trends :</Text>
+    <div class="flex flex-row justify-center items-center w-fit">
+        <img src="/trophy-icon.svg" alt="Trophy icon, standing for the trends" />
+        <Text fontSize='text-5xl' fontWeight='font-bold'>Trends :</Text>
     </div>
     <Grid>
         {#each database as db}
@@ -60,9 +63,9 @@
     </Grid>
 </section>
 <section id="all">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>All Extensions :</Text>
+    <div class="flex flex-row justify-center items-center w-fit">
+        <img src="/puzzle-icon.svg" alt="Puzzle icon, standing for all the extensions" class="mr-8" />
+        <Text fontSize='text-5xl' fontWeight='font-bold'>All Extensions :</Text>
     </div>
     <Grid>
         {#each database as db}
