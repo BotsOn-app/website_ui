@@ -20,6 +20,7 @@
         </div>
         <Text>{description}</Text>
     </div>
+    <!-- svelte-ignore a11y-missing-content -->
     <a
         href="/extensions/{id}"
         class="rounded-full bg-original-purple w-16 h-16 relative top-16 left-8 shrink-0"
