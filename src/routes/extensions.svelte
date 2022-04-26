@@ -46,35 +46,37 @@
         </Text>
     </div>
 </section>
-<section id="trends">
-    <div class="flex flex-row justify-center items-center w-fit">
-        <img src="/trophy-icon.svg" alt="Trophy icon, standing for the trends" />
-        <Text fontSize='text-5xl' fontWeight='font-bold'>Trends :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
-            />
-        {/each}
-    </Grid>
-</section>
-<section id="all">
-    <div class="flex flex-row justify-center items-center w-fit">
-        <img src="/puzzle-icon.svg" alt="Puzzle icon, standing for all the extensions" class="mr-8" />
-        <Text fontSize='text-5xl' fontWeight='font-bold'>All Extensions :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
-            />
-        {/each}
-    </Grid>
-</section>
+<main class="flex justify-center items-center flex-col">
+    <section id="trends" class="w-4/5 mt-8">
+        <div class="flex flex-row justify-center items-center w-fit">
+            <img src="/trophy-icon.svg" alt="Trophy icon, standing for the trends" />
+            <Text fontSize='text-5xl' fontWeight='font-bold'>Trends :</Text>
+        </div>
+        <Grid>
+            {#each database as db}
+                <Card
+                    name={db.data.name}
+                    description={db.data.description}
+                    bannerUrl={db.data.bannerUrl}
+                    id={db.id}
+                />
+            {/each}
+        </Grid>
+    </section>
+    <section id="all" class="w-4/5 mt-12">
+        <div class="flex flex-row justify-center items-center w-fit">
+            <img src="/puzzle-icon.svg" alt="Puzzle icon, standing for all the extensions" class="mr-8" />
+            <Text fontSize='text-5xl' fontWeight='font-bold'>All Extensions :</Text>
+        </div>
+        <Grid>
+            {#each database as db}
+                <Card
+                    name={db.data.name}
+                    description={db.data.description}
+                    bannerUrl={db.data.bannerUrl}
+                    id={db.id}
+                />
+            {/each}
+        </Grid>
+    </section>    
+</main>
