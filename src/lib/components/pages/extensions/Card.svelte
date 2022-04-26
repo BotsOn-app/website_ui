@@ -8,8 +8,8 @@
     export let isVerified: boolean;
 </script>
 
-<div class="w-[358px] h-[190px] bg-original-light-gray flex flex-row rounded-2xl overflow-hidden">
-    <div id="text" class="w-4/5 p-8">
+<div class="w-[380px] h-[190px] bg-original-light-gray flex flex-row rounded-2xl overflow-hidden">
+    <div id="text" class="w-4/5 p-8 pr-0">
         <div class="flex justify-center items-center flex-row w-fit mb-4">
             <Text fontWeight='font-bold' fontSize='text-2xl'>{name}</Text>
             {#if isVerified}
