@@ -7,28 +7,31 @@
         {
             id: 1,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'VoiceTemp',
                 description:
                     'This is a base description that says nothing but whatever: voicetemp',
+                verified: true,
             },
         },
         {
             id: 2,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'Music',
                 description:
                     'This is a base description that says nothing but whatever: music',
+                verified: false,
             },
         },
         {
             id: 3,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions-bg.svg',
                 name: 'Fake',
                 description:
                     'This is a base description that says nothing but whatever: fake',
+                verified: false,
             },
         },
     ];
@@ -43,35 +46,48 @@
         </Text>
     </div>
 </section>
-<section id="trends">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>Trends :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
+<main class="flex justify-center items-center flex-col">
+    <section id="trends" class="w-fit mt-16">
+        <div class="flex flex-row justify-center items-center w-fit mb-4">
+            <img
+                src="/trophy-icon.svg"
+                alt="Trophy icon, standing for the trends"
             />
-        {/each}
-    </Grid>
-</section>
-<section id="all">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>All Extensions :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
+            <Text fontSize="text-5xl" fontWeight="font-bold">Trends :</Text>
+        </div>
+        <Grid>
+            {#each database as db}
+                <Card
+                    name={db.data.name}
+                    description={db.data.description}
+                    bannerUrl={db.data.bannerUrl}
+                    id={db.id}
+                    isVerified={db.data.verified}
+                />
+            {/each}
+        </Grid>
+    </section>
+    <section id="all" class="w-fit mt-20">
+        <div class="flex flex-row justify-center items-center w-fit mb-4">
+            <img
+                src="/puzzle-icon.svg"
+                alt="Puzzle icon, standing for all the extensions"
+                class="mr-8"
             />
-        {/each}
-    </Grid>
-</section>
+            <Text fontSize="text-5xl" fontWeight="font-bold"
+                >All Extensions :</Text
+            >
+        </div>
+        <Grid>
+            {#each database as db}
+                <Card
+                    name={db.data.name}
+                    description={db.data.description}
+                    bannerUrl={db.data.bannerUrl}
+                    id={db.id}
+                    isVerified={db.data.verified}
+                />
+            {/each}
+        </Grid>
+    </section>
+</main>
