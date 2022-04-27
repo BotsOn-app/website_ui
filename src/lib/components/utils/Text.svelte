@@ -15,6 +15,6 @@
     export let size: string = '';
 </script>
 
-<p class="font-prompt font-{weight} text-white {size}">
+<p class="font-prompt font-{weight} text-white text-{size}">
     <slot />
 </p>
