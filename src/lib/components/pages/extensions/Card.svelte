@@ -15,6 +15,7 @@
         <div class="flex justify-center items-center flex-row w-fit mb-4">
             <Text fontWeight="font-bold" fontSize="text-2xl">{name}</Text>
             {#if isVerified}
+                <!-- TODO: Create hover effect with pseudo element to display a little card with "Verified" displayed -->
                 <img src="/verified-icon.svg" alt="" class="ml-2" />
             {/if}
         </div>
