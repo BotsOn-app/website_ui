@@ -1,5 +1,6 @@
 <script lang="ts">
     export let fontWeight: FontWeight = 'font-medium';
+    export let extendClass: string = "";
 
     type FontWeight =
         | 'font-thin'
@@ -15,6 +16,6 @@
     export let fontSize: string = '';
 </script>
 
-<p class="font-prompt {fontWeight} text-white {fontSize}">
+<p class="font-prompt {fontWeight} text-white {fontSize} {extendClass}">
     <slot />
 </p>

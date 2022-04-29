@@ -43,30 +43,34 @@
     </div>
 </section>
 <section
-    class="flex justify-around items-center w-full flex-row-reverse h-[450px]"
+    class="flex justify-center items-center w-full h-[450px]"
 >
-    <div>
-        <Text fontSize="text-4xl" fontWeight="font-bold">
-            Make a bot without bothering you with code
-        </Text>
-        <Text fontSize="text-2xl">
-            We provide the ability to install extensions made by developers who
-            have various objectives.
-        </Text>
+    <div class="flex justify-around items-center w-[80%] flex-row-reverse h-full">
+        <div>
+            <Text fontSize="text-4xl" fontWeight="font-bold" extendClass="mb-4">
+                Make a bot<br>without bothering<br>you with code
+            </Text>
+            <Text fontSize="text-2xl">
+                We provide the ability to install<br>extensions made by developers who<br>
+                have various objectives.
+            </Text>
+        </div>
+        <img src="/top-illu.svg" alt="" />
     </div>
-    <img src="" alt="" />
 </section>
-<section class="flex justify-around items-center w-full flex-row h-[450px]">
-    <div>
-        <Text fontSize="text-4xl" fontWeight="font-bold">
-            See your bots stats in live!
-        </Text>
-        <Text fontSize="text-2xl">
-            BotsOn propose a stats page of your bot to know more about what the
-            communities asks for!
-        </Text>
+<section class="w-full h-[450px] flex justify-center items-center">
+    <div class="flex justify-around items-center w-[80%] flex-row">
+        <div>
+            <Text fontSize="text-4xl" fontWeight="font-bold" extendClass="mb-4">
+                See your bots <br>stats in live!
+            </Text>
+            <Text fontSize="text-2xl">
+                BotsOn propose a stats page of your bot<br>to know more about what the<br>
+                communities asks for!
+            </Text>
+        </div>
+        <img src="/bottom-illu.svg" alt="" />
     </div>
-    <img src="" alt="" />
 </section>
 
 <style>
