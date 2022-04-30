@@ -8,7 +8,7 @@
         <h1 class="hero-section-title mb-10">
             Create your <br /> discord bot without knowing to code!
         </h1>
-        <Text weight="normal" size="2xl"
+        <Text class="text-2xl font-normal"
             >Create a discord bot with an ingenious extension system, specially
             made by BotsOn.
         </Text>
@@ -24,16 +24,16 @@
 <section class="flex justify-center items-center h-36 w-full">
     <div class="flex justify-around items-center w-3/5 h-full">
         <div class="flex justify-center items-center flex-col">
-            <Text weight="bold" size="4xl">200</Text>
-            <Text size="2xl">Bots created</Text>
+            <Text class="text-4xl font-bold">200</Text>
+            <Text class="text-2xl">Bots created</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text weight="bold" size="4xl">100</Text>
-            <Text size="2xl">Downloads</Text>
+            <Text class="text-4xl font-bold">100</Text>
+            <Text class="text-2xl">Downloads</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text weight="bold" size="4xl">14</Text>
-            <Text size="2xl">Extensions</Text>
+            <Text class="text-4xl font-bold">14</Text>
+            <Text class="text-2xl">Extensions</Text>
         </div>
     </div>
 </section>
@@ -42,10 +42,10 @@
         class="flex justify-around items-center w-[80%] flex-row-reverse h-full"
     >
         <div>
-            <Text size="4xl" weight="bold" extendClass="mb-4">
+            <Text class="text-4xl font-bold mb-4">
                 Make a bot<br />without bothering<br />you with code
             </Text>
-            <Text size="2xl">
+            <Text class="text-2xl">
                 We provide the ability to install<br />extensions made by
                 developers who<br />
                 have various objectives.
@@ -57,10 +57,10 @@
 <section class="w-full h-[450px] flex justify-center items-center">
     <div class="flex justify-around items-center w-[80%] flex-row">
         <div>
-            <Text size="4xl" weight="bold" extendClass="mb-4">
+            <Text class="text-4xl font-bold mb-4">
                 See your bots <br />stats in live!
             </Text>
-            <Text size="2xl">
+            <Text class="text-2xl">
                 BotsOn propose a stats page of your bot<br />to know more about
                 what the<br />
                 communities asks for!

@@ -41,7 +41,7 @@
     <div
         class="bg-[url('/extensions-bg.svg')] flex justify-center items-center w-full bg-cover bg-no-repeat h-[618.75px]"
     >
-        <Text size="6xl" weight="bold">
+        <Text class="text-5xl font-bold">
             Choose the extensions<br />that best suit your bot
         </Text>
     </div>
@@ -54,7 +54,7 @@
                     src="/trophy-icon.svg"
                     alt="Trophy icon, standing for the trends"
                 />
-                <Text size="5xl" weight="bold">Trends :</Text>
+                <Text class="text-5xl font-bold">Trends :</Text>
             </div>
             <Grid>
                 {#each database as db}
@@ -81,7 +81,7 @@
                     alt="Puzzle icon, standing for all the extensions"
                     class="mr-8"
                 />
-                <Text size="text-5xl" weight="bold">All Extensions :</Text>
+                <Text class="text-5xl font-bold">All Extensions :</Text>
             </div>
             <Grid>
                 {#each database as db}
