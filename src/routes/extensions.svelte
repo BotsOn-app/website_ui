@@ -7,7 +7,7 @@
         {
             id: 1,
             data: {
-                bannerUrl: '/extensions-bg.svg',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'VoiceTemp',
                 description:
                     'This is a base description that says nothing but whatever: voicetemp',
@@ -17,7 +17,7 @@
         {
             id: 2,
             data: {
-                bannerUrl: '/extensions-bg.svg',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'Music',
                 description:
                     'This is a base description that says nothing but whatever: music',
@@ -27,7 +27,7 @@
         {
             id: 3,
             data: {
-                bannerUrl: '/extensions-bg.svg',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'Fake',
                 description:
                     'This is a base description that says nothing but whatever: fake',
@@ -39,7 +39,7 @@
 
 <section>
     <div
-        class="bg-[url('/extensions-bg.svg')] flex justify-center items-center w-full bg-cover bg-no-repeat h-[618.75px]"
+        class="bg-[url('/extensions/extensions-bg.svg')] flex justify-center items-center w-full bg-cover bg-no-repeat h-[618.75px]"
     >
         <Text class="text-5xl font-bold">
             Choose the extensions<br />that best suit your bot
@@ -51,7 +51,7 @@
         <section id="trends" class="w-fit mt-16">
             <div class="flex flex-row justify-center items-center w-fit mb-4">
                 <img
-                    src="/trophy-icon.svg"
+                    src="/extensions/trophy-icon.svg"
                     alt="Trophy icon, standing for the trends"
                 />
                 <Text class="text-5xl font-bold">Trends :</Text>
@@ -77,7 +77,7 @@
         <section id="all" class="w-fit mt-20">
             <div class="flex flex-row justify-center items-center w-fit mb-4">
                 <img
-                    src="/puzzle-icon.svg"
+                    src="/extensions/puzzle-icon.svg"
                     alt="Puzzle icon, standing for all the extensions"
                     class="mr-8"
                 />

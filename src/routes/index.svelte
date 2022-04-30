@@ -19,7 +19,7 @@
             </Button>
         </div>
     </div>
-    <img src="/hero-rightpart.svg" alt="" class="" />
+    <img src="/index/hero-rightpart.svg" alt="" class="" />
 </section>
 <section class="flex justify-center items-center h-36 w-full">
     <div class="flex justify-around items-center w-3/5 h-full">
@@ -51,7 +51,7 @@
                 have various objectives.
             </Text>
         </div>
-        <img src="/top-illu.svg" alt="" />
+        <img src="/index/top-illu.svg" alt="" />
     </div>
 </section>
 <section class="w-full h-[450px] flex justify-center items-center">
@@ -66,7 +66,7 @@
                 communities asks for!
             </Text>
         </div>
-        <img src="/bottom-illu.svg" alt="" />
+        <img src="/index/bottom-illu.svg" alt="" />
     </div>
 </section>
 
