@@ -3,16 +3,6 @@
     import Grid from '$lib/components/pages/extensions/Grid.svelte';
     import Text from '$lib/components/utils/Text.svelte';
 
-    const db: {
-        id: number;
-        data: {
-            bannerUrl: string;
-            name: string;
-            description: string;
-            verified: boolean;
-        };
-    }[] = [];
-
     const database = [
         {
             id: 1,
