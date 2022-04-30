@@ -8,18 +8,13 @@
         <h1 class="hero-section-title mb-10">
             Create your <br /> discord bot without knowing to code!
         </h1>
-        <Text fontWeight="font-normal" fontSize="text-2xl"
+        <Text weight="normal" size="2xl"
             >Create a discord bot with an ingenious extension system, specially
             made by BotsOn.
         </Text>
         <div class="mt-12 flex">
-            <Button type="primary" to="/downloads">
-                Download
-            </Button>
-            <Button
-                type="lightSecondary"
-                to="/extensions"
-            >
+            <Button type="primary" to="/downloads">Download</Button>
+            <Button type="lightSecondary" to="/extensions">
                 All Extensions
             </Button>
         </div>
@@ -29,29 +24,30 @@
 <section class="flex justify-center items-center h-36 w-full">
     <div class="flex justify-around items-center w-3/5 h-full">
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">200</Text>
-            <Text fontSize="text-2xl">Bots created</Text>
+            <Text weight="bold" size="4xl">200</Text>
+            <Text size="2xl">Bots created</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">100</Text>
-            <Text fontSize="text-2xl">Downloads</Text>
+            <Text weight="bold" size="4xl">100</Text>
+            <Text size="2xl">Downloads</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">14</Text>
-            <Text fontSize="text-2xl">Extensions</Text>
+            <Text weight="bold" size="4xl">14</Text>
+            <Text size="2xl">Extensions</Text>
         </div>
     </div>
 </section>
-<section
-    class="flex justify-center items-center w-full h-[450px]"
->
-    <div class="flex justify-around items-center w-[80%] flex-row-reverse h-full">
+<section class="flex justify-center items-center w-full h-[450px]">
+    <div
+        class="flex justify-around items-center w-[80%] flex-row-reverse h-full"
+    >
         <div>
-            <Text fontSize="text-4xl" fontWeight="font-bold" extendClass="mb-4">
-                Make a bot<br>without bothering<br>you with code
+            <Text size="4xl" weight="bold" extendClass="mb-4">
+                Make a bot<br />without bothering<br />you with code
             </Text>
-            <Text fontSize="text-2xl">
-                We provide the ability to install<br>extensions made by developers who<br>
+            <Text size="2xl">
+                We provide the ability to install<br />extensions made by
+                developers who<br />
                 have various objectives.
             </Text>
         </div>
@@ -61,11 +57,12 @@
 <section class="w-full h-[450px] flex justify-center items-center">
     <div class="flex justify-around items-center w-[80%] flex-row">
         <div>
-            <Text fontSize="text-4xl" fontWeight="font-bold" extendClass="mb-4">
-                See your bots <br>stats in live!
+            <Text size="4xl" weight="bold" extendClass="mb-4">
+                See your bots <br />stats in live!
             </Text>
-            <Text fontSize="text-2xl">
-                BotsOn propose a stats page of your bot<br>to know more about what the<br>
+            <Text size="2xl">
+                BotsOn propose a stats page of your bot<br />to know more about
+                what the<br />
                 communities asks for!
             </Text>
         </div>

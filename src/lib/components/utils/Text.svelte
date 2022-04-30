@@ -1,21 +1,21 @@
 <script lang="ts">
-    export let fontWeight: FontWeight = 'font-medium';
-    export let extendClass: string = "";
+    export let weight: FontWeight = 'medium';
+    export let extendClass: string = '';
 
     type FontWeight =
-        | 'font-thin'
-        | 'font-extralight'
-        | 'font-light'
-        | 'font-normal'
-        | 'font-medium'
-        | 'font-semibold'
-        | 'font-bold'
-        | 'font-extrabold'
-        | 'font-black';
+        | 'thin'
+        | 'extralight'
+        | 'light'
+        | 'normal'
+        | 'medium'
+        | 'semibold'
+        | 'bold'
+        | 'extrabold'
+        | 'black';
 
-    export let fontSize: string = '';
+    export let size: string = '';
 </script>
 
-<p class="font-prompt {fontWeight} text-white {fontSize} {extendClass}">
+<p class="font-prompt font-{weight} text-white text-{size} {extendClass}">
     <slot />
 </p>
