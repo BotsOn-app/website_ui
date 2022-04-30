@@ -91,7 +91,7 @@
                     alt="Puzzle icon, standing for all the extensions"
                     class="mr-8"
                 />
-                <Text size="text-5xl" weight="font-bold">All Extensions :</Text>
+                <Text size="text-5xl" weight="bold">All Extensions :</Text>
             </div>
             <Grid>
                 {#each database as db}

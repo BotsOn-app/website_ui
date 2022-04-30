@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Text from '../utils/Text.svelte';
 </script>
 
