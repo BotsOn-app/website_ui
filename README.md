@@ -16,12 +16,12 @@ $ npm run dev -- --open
 ```
 
 ### Endpoints
-project/
-├── downloads/
-│   ├── linux/
-│   ├── windows/
-│   └── macos/
-├── extensions/
-├── docs/
+project/  
+├── downloads/  
+│   ├── linux/  
+│   ├── windows/  
+│   └── macos/  
+├── extensions/  
+├── docs/  
 
 The /api/ endpoint is not listed here because it is part of another project present in our github organization.
