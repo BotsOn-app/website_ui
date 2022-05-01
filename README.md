@@ -22,6 +22,6 @@ project/
 │   ├── windows/  
 │   └── macos/  
 ├── extensions/  
-├── docs/  
+└── docs/  
 
 The /api/ endpoint is not listed here because it is part of another project present in our github organization.
