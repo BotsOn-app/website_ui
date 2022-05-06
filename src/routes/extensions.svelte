@@ -7,28 +7,31 @@
         {
             id: 1,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'VoiceTemp',
                 description:
                     'This is a base description that says nothing but whatever: voicetemp',
+                verified: true,
             },
         },
         {
             id: 2,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'Music',
                 description:
                     'This is a base description that says nothing but whatever: music',
+                verified: false,
             },
         },
         {
             id: 3,
             data: {
-                bannerUrl: 'https://giphy.com/helloworld.png',
+                bannerUrl: '/extensions/extensions-bg.svg',
                 name: 'Fake',
                 description:
                     'This is a base description that says nothing but whatever: fake',
+                verified: false,
             },
         },
     ];
@@ -36,42 +39,65 @@
 
 <section>
     <div
-        class="bg-[url('/extensions-bg.svg')] flex justify-center items-center w-full bg-cover bg-no-repeat h-[618.75px]"
+        class="bg-[url('/extensions/extensions-bg.svg')] flex justify-center items-center w-full bg-cover bg-no-repeat h-[618.75px]"
     >
-        <Text fontSize="text-6xl" fontWeight="font-bold">
+        <Text class="text-5xl font-bold">
             Choose the extensions<br />that best suit your bot
         </Text>
     </div>
 </section>
-<section id="trends">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>Trends :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
-            />
-        {/each}
-    </Grid>
-</section>
-<section id="all">
-    <div class="flex flex-row">
-        <img src="" alt="" />
-        <Text>All Extensions :</Text>
-    </div>
-    <Grid>
-        {#each database as db}
-            <Card
-                name={db.data.name}
-                description={db.data.description}
-                bannerUrl={db.data.bannerUrl}
-                id={db.id}
-            />
-        {/each}
-    </Grid>
-</section>
+<main class="flex justify-center items-center flex-col">
+    {#if database.length != 0}
+        <section id="trends" class="w-fit mt-16">
+            <div class="flex flex-row justify-center items-center w-fit mb-4">
+                <img
+                    src="/extensions/trophy-icon.svg"
+                    alt="Trophy icon, standing for the trends"
+                />
+                <Text class="text-5xl font-bold">Trends :</Text>
+            </div>
+            <Grid>
+                {#each database as db}
+                    <Card
+                        name={db.data.name}
+                        description={db.data.description}
+                        bannerUrl={db.data.bannerUrl}
+                        id={db.id}
+                        isVerified={db.data.verified}
+                    />
+                {/each}
+            </Grid>
+        </section>
+    {:else}
+        <div class="w-full flex justify-center items-center h-8">
+            <p>Loading data...</p>
+        </div>
+    {/if}
+    {#if database.length != 0}
+        <section id="all" class="w-fit mt-20">
+            <div class="flex flex-row justify-center items-center w-fit mb-4">
+                <img
+                    src="/extensions/puzzle-icon.svg"
+                    alt="Puzzle icon, standing for all the extensions"
+                    class="mr-8"
+                />
+                <Text class="text-5xl font-bold">All Extensions :</Text>
+            </div>
+            <Grid>
+                {#each database as db}
+                    <Card
+                        name={db.data.name}
+                        description={db.data.description}
+                        bannerUrl={db.data.bannerUrl}
+                        id={db.id}
+                        isVerified={db.data.verified}
+                    />
+                {/each}
+            </Grid>
+        </section>
+    {:else}
+        <div class="w-full flex justify-center items-center h-8">
+            <p>Nothing to show there !</p>
+        </div>
+    {/if}
+</main>

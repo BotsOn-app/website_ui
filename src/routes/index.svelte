@@ -8,65 +8,66 @@
         <h1 class="hero-section-title mb-10">
             Create your <br /> discord bot without knowing to code!
         </h1>
-        <Text fontWeight="font-normal" fontSize="text-2xl"
+        <Text class="text-2xl font-normal"
             >Create a discord bot with an ingenious extension system, specially
             made by BotsOn.
         </Text>
         <div class="mt-12 flex">
-            <Button background="bg-original-purple" onClickRoute="/downloads">
-                Download
-            </Button>
-            <Button
-                background="bg-original-light-gray"
-                onClickRoute="/extensions"
-            >
+            <Button type="primary" to="/downloads">Download</Button>
+            <Button type="lightSecondary" to="/extensions">
                 All Extensions
             </Button>
         </div>
     </div>
-    <img src="/hero-rightpart.svg" alt="" class="" />
+    <img src="/index/hero-rightpart.svg" alt="" class="" />
 </section>
 <section class="flex justify-center items-center h-36 w-full">
     <div class="flex justify-around items-center w-3/5 h-full">
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">200</Text>
-            <Text fontSize="text-2xl">Bots created</Text>
+            <Text class="text-4xl font-bold">200</Text>
+            <Text class="text-2xl">Bots created</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">100</Text>
-            <Text fontSize="text-2xl">Downloads</Text>
+            <Text class="text-4xl font-bold">100</Text>
+            <Text class="text-2xl">Downloads</Text>
         </div>
         <div class="flex justify-center items-center flex-col">
-            <Text fontWeight="font-bold" fontSize="text-4xl">14</Text>
-            <Text fontSize="text-2xl">Extensions</Text>
+            <Text class="text-4xl font-bold">14</Text>
+            <Text class="text-2xl">Extensions</Text>
         </div>
     </div>
 </section>
-<section
-    class="flex justify-around items-center w-full flex-row-reverse h-[450px]"
->
-    <div>
-        <Text fontSize="text-4xl" fontWeight="font-bold">
-            Make a bot without bothering you with code
-        </Text>
-        <Text fontSize="text-2xl">
-            We provide the ability to install extensions made by developers who
-            have various objectives.
-        </Text>
+<section class="flex justify-center items-center w-full h-[450px]">
+    <div
+        class="flex justify-around items-center w-[80%] flex-row-reverse h-full"
+    >
+        <div>
+            <Text class="text-4xl font-bold mb-4">
+                Make a bot<br />without bothering<br />you with code
+            </Text>
+            <Text class="text-2xl">
+                We provide the ability to install<br />extensions made by
+                developers who<br />
+                have various objectives.
+            </Text>
+        </div>
+        <img src="/index/top-illu.svg" alt="" />
     </div>
-    <img src="" alt="" />
 </section>
-<section class="flex justify-around items-center w-full flex-row h-[450px]">
-    <div>
-        <Text fontSize="text-4xl" fontWeight="font-bold">
-            See your bots stats in live!
-        </Text>
-        <Text fontSize="text-2xl">
-            BotsOn propose a stats page of your bot to know more about what the
-            communities asks for!
-        </Text>
+<section class="w-full h-[450px] flex justify-center items-center">
+    <div class="flex justify-around items-center w-[80%] flex-row">
+        <div>
+            <Text class="text-4xl font-bold mb-4">
+                See your bots <br />stats in live!
+            </Text>
+            <Text class="text-2xl">
+                BotsOn propose a stats page of your bot<br />to know more about
+                what the<br />
+                communities asks for!
+            </Text>
+        </div>
+        <img src="/index/bottom-illu.svg" alt="" />
     </div>
-    <img src="" alt="" />
 </section>
 
 <style>
