@@ -1,20 +1,23 @@
 <script context="module" lang="ts">
     /** @ts-ignore */
-    export const load = ({ status }) => {
+    export const load = ({ status, error }) => {
         return {
             props: {
-                status,
+                status: status,
+                message: error.message,
             },
         };
     };
 </script>
 
 <script lang="ts">
+    import Text from '$lib/components/utils/Text.svelte';
+
     export let status: number;
+    export let message: string;
 </script>
 
-{#if status == 404}
-    <p>PAGE 404</p>
-{:else}
-    Autre error?
-{/if}
+<div id="error">
+    <Text>Error <span>{status}</span></Text>
+    <!-- <Text>{message}</Text> -->
+</div>
