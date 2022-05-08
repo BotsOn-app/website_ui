@@ -1,12 +1,12 @@
 <script lang="ts">
     let color = {
-        primary: "bg-original-purple",
-        secondary: "bg-original-gray",
-        lightPrimary: "bg-original-light-purple",
-        lightSecondary: "bg-original-light-gray",
+        primary: 'bg-original-purple',
+        secondary: 'bg-original-gray',
+        lightPrimary: 'bg-original-light-purple',
+        lightSecondary: 'bg-original-light-gray',
     };
 
-    type Type = "primary" | "secondary" | "lightPrimary" | "lightSecondary";
+    type Type = 'primary' | 'secondary' | 'lightPrimary' | 'lightSecondary';
 
     export let type: Type;
     export let to: string;

@@ -13,39 +13,14 @@
     import Card from '$lib/components/pages/extensions/Card.svelte';
     import Grid from '$lib/components/pages/extensions/Grid.svelte';
     import Text from '$lib/components/utils/Text.svelte';
+    import { onMount } from 'svelte';
 
-    const database = [
-        {
-            id: 1,
-            data: {
-                bannerUrl: '/extensions/extensions-bg.svg',
-                name: 'VoiceTemp',
-                description:
-                    'This is a base description that says nothing but whatever: voicetemp',
-                verified: true,
-            },
-        },
-        {
-            id: 2,
-            data: {
-                bannerUrl: '/extensions/extensions-bg.svg',
-                name: 'Music',
-                description:
-                    'This is a base description that says nothing but whatever: music',
-                verified: false,
-            },
-        },
-        {
-            id: 3,
-            data: {
-                bannerUrl: '/extensions/extensions-bg.svg',
-                name: 'Fake',
-                description:
-                    'This is a base description that says nothing but whatever: fake',
-                verified: false,
-            },
-        },
-    ];
+    let promise: Promise<any>;
+
+    onMount(async () => {
+        const res = await fetch('http://localhost:8000/api/extensions');
+        promise = res.json();
+    });
 </script>
 
 <section>
@@ -58,57 +33,65 @@
     </div>
 </section>
 <main class="flex justify-center items-center flex-col">
-    {#if database.length != 0}
-        <section id="trends" class="w-fit mt-16">
-            <div class="flex flex-row justify-center items-center w-fit mb-4">
-                <img
-                    src="/extensions/trophy-icon.svg"
-                    alt="Trophy icon, standing for the trends"
-                />
-                <Text class="text-5xl font-bold">Trends :</Text>
-            </div>
-            <Grid>
-                {#each database as db}
-                    <Card
-                        name={db.data.name}
-                        description={db.data.description}
-                        bannerUrl={db.data.bannerUrl}
-                        id={db.id}
-                        isVerified={db.data.verified}
-                    />
-                {/each}
-            </Grid>
-        </section>
-    {:else}
+    {#await promise}
         <div class="w-full flex justify-center items-center h-8">
             <p>Loading data...</p>
         </div>
-    {/if}
-    {#if database.length != 0}
-        <section id="all" class="w-fit mt-20">
-            <div class="flex flex-row justify-center items-center w-fit mb-4">
-                <img
-                    src="/extensions/puzzle-icon.svg"
-                    alt="Puzzle icon, standing for all the extensions"
-                    class="mr-8"
-                />
-                <Text class="text-5xl font-bold">All Extensions :</Text>
-            </div>
-            <Grid>
-                {#each database as db}
-                    <Card
-                        name={db.data.name}
-                        description={db.data.description}
-                        bannerUrl={db.data.bannerUrl}
-                        id={db.id}
-                        isVerified={db.data.verified}
+    {:then value}
+        {#if value !== undefined}
+            <section id="trends" class="w-fit mt-16">
+                <div
+                    class="flex flex-row justify-center items-center w-fit mb-4"
+                >
+                    <img
+                        src="/extensions/trophy-icon.svg"
+                        alt="Trophy icon, standing for the trends"
                     />
-                {/each}
-            </Grid>
-        </section>
-    {:else}
+                    <Text class="text-5xl font-bold">Trends :</Text>
+                </div>
+                <Grid>
+                    {#each value as v}
+                        <Card
+                            name={v.data.name}
+                            description={v.data.description}
+                            bannerUrl={v.data.banner.url}
+                            id={v.id}
+                            isVerified={v.data.verified}
+                        />
+                    {/each}
+                </Grid>
+            </section>
+        {/if}
+    {/await}
+    {#await promise}
         <div class="w-full flex justify-center items-center h-8">
             <p>Nothing to show there !</p>
         </div>
-    {/if}
+    {:then value}
+        {#if value !== undefined}
+            <section id="all" class="w-fit mt-20">
+                <div
+                    class="flex flex-row justify-center items-center w-fit mb-4"
+                >
+                    <img
+                        src="/extensions/puzzle-icon.svg"
+                        alt="Puzzle icon, standing for all the extensions"
+                        class="mr-8"
+                    />
+                    <Text class="text-5xl font-bold">All Extensions :</Text>
+                </div>
+                <Grid>
+                    {#each value as v}
+                        <Card
+                            name={v.data.name}
+                            description={v.data.description}
+                            bannerUrl={v.data.bannerUrl}
+                            id={v.id}
+                            isVerified={v.data.verified}
+                        />
+                    {/each}
+                </Grid>
+            </section>
+        {/if}
+    {/await}
 </main>
