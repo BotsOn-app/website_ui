@@ -9,19 +9,19 @@ To contribute to this project, you must have [Node](https://nodejs.org/en/) and 
 ## Installation
 Follow those steps to contribute to the project.
 First of all, you need to fork and clone the project.
-Then, you just have to run those :$
+Then, you just have to run these commands :
 ```bash
-$ cd yourdirectory
-$ npm run dev -- --open 
+cd yourdirectory
+npm run dev -- --open 
 ```
 
 ### Endpoints
-project/
-├── downloads/
-│   ├── linux/
-│   ├── windows/
-│   └── macos/
-├── extensions/
-├── docs/
+project/  
+├── downloads/  
+│   ├── linux/  
+│   ├── windows/  
+│   └── macos/  
+├── extensions/  
+└── docs/  
 
 The /api/ endpoint is not listed here because it is part of another project present in our github organization.
