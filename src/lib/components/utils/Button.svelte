@@ -12,10 +12,12 @@
     export let to: string;
 
     let background = color[type];
+    let className: string = '';
+    export { className as class };
 </script>
 
 <button
-    class="{background} text-white shadow-lg font-prompt p-3 pl-10 pr-10 rounded-xl mr-12"
+    class="{background} text-white shadow-lg font-prompt p-3 pl-10 pr-10 rounded-xl mr-12 {className}"
 >
     <a
         href={to}
