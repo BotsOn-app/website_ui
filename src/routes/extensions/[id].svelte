@@ -1,31 +1,35 @@
 <script lang="ts">
-import { page } from "$app/stores";
-import Changes from "$lib/components/pages/extensions/Changes.svelte";
-import Button from "$lib/components/utils/Button.svelte";
-import Text from "$lib/components/utils/Text.svelte";
-import { onMount } from "svelte";
-let id: string = $page.params.id;
+	import { page } from "$app/stores";
+	import Changes from "$lib/components/pages/extensions/Changes.svelte";
+	import Button from "$lib/components/utils/Button.svelte";
+	import Text from "$lib/components/utils/Text.svelte";
+	import { onMount } from "svelte";
+	let id: string = $page.params.id;
 
-let source: string = `http://localhost:8000/api/extensions/${id}`;
+	let source: string = `http://localhost:8000/api/extensions/${id}`;
 
-let promise: Promise<any>;
+	let promise: Promise<any>;
 
-onMount(async () => {
-	const res = await fetch(source);
-	promise = res.json();
-	console.log(promise);
-});
+	onMount(async () => {
+		const res = await fetch(source);
+		promise = res.json();
+		console.log(promise);
+	});
 </script>
 
 {#await promise then extension}
 	{#if extension !== undefined}
 		<div
-			class="bg-[url('{extension.data.banner.url}')]
-				h-[618.75px] w-full flex justify-center items-center pt-8 flex-col">
-			<Text class="font-extrabold text-6xl mb-10">{extension.data.name}</Text>
-			<Text class="font-semibold text-3xl">{extension.data.description}</Text>
+			class="background-holder bg-[url('{extension.data.banner.url}')]
+				h-[500px] w-full flex justify-center items-center pt-16 flex-col bg-cover 
+				after:relative after:content-[''] after:bottom-0 after:bg-gradient-to-t after:from-original-dark after:to-transparent after:w-full after:h-full">
+			<div
+				class="h-full w-full flex justify-center items-center flex-col mt-16">
+				<Text class="font-extrabold text-6xl mb-10">{extension.data.name}</Text>
+				<Text class="font-semibold text-3xl">{extension.data.description}</Text>
+			</div>
 		</div>
-		<div class="flex justify-center items-center">
+		<div class="flex justify-center items-center pt-32">
 			<div class="w-[60%] flex justify-around items-start">
 				<div
 					class="p-8 border border-original-light-gray rounded-xl bg-original-gray w-full mr-8">
