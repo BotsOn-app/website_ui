@@ -1,8 +1,8 @@
 <script lang="ts">
-import Text from "$lib/components/utils/Text.svelte";
-export let title: string;
-export let content: string;
-export let version: string;
+	import Text from "$lib/components/utils/Text.svelte";
+	export let title: string;
+	export let content: string;
+	export let version: string;
 </script>
 
 <div
