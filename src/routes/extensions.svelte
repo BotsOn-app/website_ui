@@ -44,7 +44,7 @@
 				<Text>Loading data...</Text>
 			</div>
 		{:then value}
-			{#if value !== undefined}
+			{#if value != undefined}
 				<Grid>
 					{#each value as v}
 						<Card
@@ -75,7 +75,7 @@
 				<Text>Loading data...</Text>
 			</div>
 		{:then value}
-			{#if value !== undefined}
+			{#if value != undefined}
 				<Grid>
 					{#each value as v}
 						<Card
