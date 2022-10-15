@@ -1,13 +1,4 @@
-<script context="module">
-	// @ts-ignore
-	export const load = ({ something }) => {
-		return {
-			props: {
-				something,
-			},
-		};
-	};
-</script>
+
 
 <script lang="ts">
 	import Card from "$lib/components/pages/extensions/Card.svelte";

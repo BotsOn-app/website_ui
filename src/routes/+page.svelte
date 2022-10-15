@@ -1,13 +1,4 @@
-<script context="module">
-    // @ts-ignore
-    export const load = ({ something }) => {
-        return {
-            props: {
-                something,
-            },
-        };
-    };
-</script>
+
 
 <script>
     import Button from '$lib/components/utils/Button.svelte';
