@@ -7,7 +7,7 @@ const config = {
         plugins: [sveltekit()],
         preprocess: [
                 preprocess({
-                        postcss: true
+                        postcss: true,
                 })
         ],
         resolve: {
