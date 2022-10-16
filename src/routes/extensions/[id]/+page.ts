@@ -1,11 +1,10 @@
-import type { Load } from "@sveltejs/kit";
-import type { IExtensions } from "../extensions";
-export const load: Load = async ({ data, fetch, params }) => {
-	const res: any = await fetch(
-		`http://localhost:8000/api/extensions/${params.id}`
-	);
-	const extensions: IExtensions = res.json();
+export const load = async ({ data, fetch, params }) => {
+	const fetchExtension = async (id: string) => {
+		const res = await fetch(`http://localhost:8000/api/extensions/${id}`);
+		const extension = res.json();
+		return extension;
+	};
 	return {
-		extensions,
+		extension: fetchExtension(params.id),
 	};
 };

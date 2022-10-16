@@ -2,9 +2,9 @@
 	import Card from "$lib/components/pages/extensions/Card.svelte";
 	import Grid from "$lib/components/pages/extensions/Grid.svelte";
 	import Text from "$lib/components/utils/Text.svelte";
-	import type { IExtensions } from "./extensions";
 
-	export let data: IExtensions[];
+	export let data;
+	const { extension } = data;
 </script>
 
 <section>
@@ -23,15 +23,15 @@
 				alt="Trophy icon, standing for the trends" />
 			<Text class="text-5xl font-bold">Trends :</Text>
 		</div>
-		{#if data != undefined}
+		{#if extension != undefined}
 			<Grid>
-				{#each data as d}
+				{#each extension as e}
 					<Card
-						name={d.data.name}
-						description={d.data.description}
-						bannerUrl={d.data.banner.url}
-						id={d.id}
-						isVerified={d.data.verified} />
+						name={e.data.name}
+						description={e.data.description}
+						bannerUrl={e.data.banner.url}
+						id={e.id}
+						isVerified={e.data.verified} />
 				{/each}
 			</Grid>
 		{:else}
@@ -49,15 +49,15 @@
 			<Text class="text-5xl font-bold">All Extensions :</Text>
 		</div>
 
-		{#if data != undefined}
+		{#if extension != undefined}
 			<Grid>
-				{#each data as d}
+				{#each extension as e}
 					<Card
-						name={d.data.name}
-						description={d.data.description}
-						bannerUrl={d.data.banner.url}
-						id={d.id}
-						isVerified={d.data.verified} />
+						name={e.data.name}
+						description={e.data.description}
+						bannerUrl={e.data.banner.url}
+						id={e.id}
+						isVerified={e.data.verified} />
 				{/each}
 			</Grid>
 		{:else}

@@ -17,7 +17,7 @@
 <div class="bg-original-dark h-screen w-full">
 	<div class="flex justify-center items-center w-full h-full flex-col">
 		<Text class="text-9xl font-bold"
-			>Error <span class="font-black">{$page.error?.name}</span></Text>
+			>Error <span class="font-black">{$page.error.message}</span></Text>
 		<Text class="font-semibold text-6xl">Service in maintenance</Text>
 	</div>
 	<div class="absolute bottom-0 right-0">
