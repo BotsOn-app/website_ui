@@ -4,24 +4,19 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm ci
-
-RUN npm audit fix
+RUN npm install
 
 RUN npm run build
 
 
 # stage run
-FROM node:16-alpine
+FROM node:18.8.0-alpine
 
 WORKDIR /app
 
 COPY --from=0 /app/package*.json ./
 
-RUN npm ci --production --ignore-scripts
-
-
-RUN npm audit fix
+RUN npm install
 
 COPY --from=0 /app/build ./
 
