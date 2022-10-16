@@ -2,18 +2,18 @@
 	import Changes from "$lib/components/pages/extensions/Changes.svelte";
 	import Button from "$lib/components/utils/Button.svelte";
 	import Text from "$lib/components/utils/Text.svelte";
-	import type { IExtensions } from "../extensions";
-	export let data: IExtensions;
+	export let data;
+	const { extension } = data;
 </script>
 
 {#if data !== undefined}
 	<div
-		class="background-holder bg-[url('{data.data.banner.url}')]
+		class="background-holder bg-[url('{extension.data.banner.url}')]
 				h-[500px] w-full flex justify-center items-center pt-16 flex-col bg-cover 
 				after:relative after:content-[''] after:bottom-0 after:bg-gradient-to-t after:from-original-dark after:to-transparent after:w-full after:h-full">
 		<div class="h-full w-full flex justify-center items-center flex-col mt-16">
-			<Text class="font-extrabold text-6xl mb-10">{data.data.name}</Text>
-			<Text class="font-semibold text-3xl">{data.data.description}</Text>
+			<Text class="font-extrabold text-6xl mb-10">{extension.data.name}</Text>
+			<Text class="font-semibold text-3xl">{extension.data.description}</Text>
 		</div>
 	</div>
 	<div class="flex justify-center items-center pt-32">
@@ -25,7 +25,7 @@
 					<Text class="ml-2 text-2xl">Last Update</Text>
 				</div>
 				<div class="first:border-b-0 flex flex-col-reverse">
-					{#each data.data.changes as change}
+					{#each extension.data.changes as change}
 						<Changes
 							content={change.content}
 							title={change.title}
@@ -37,13 +37,13 @@
 				class="p-6 border border-original-light-gray rounded-xl bg-original-gray">
 				<Text class="font-thin text-2xl mb-4"
 					><span class="font-bold">By : </span>
-					{data.author.name}
+					{extension.author.name}
 				</Text>
 				<Text class="font-thin text-2xl mb-4">
-					<span class="font-bold">Version :</span>{data.version}
+					<span class="font-bold">Version :</span>{extension.version}
 				</Text>
 				<Text class="font-thin text-2xl mb-4">
-					<span class="font-bold">Verified : </span>{data.data.verified
+					<span class="font-bold">Verified : </span>{extension.data.verified
 						? "True"
 						: "False"}
 				</Text>

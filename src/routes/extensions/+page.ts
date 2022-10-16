@@ -1,10 +1,10 @@
+import { env } from "$env/dynamic/public";
+
 export const load = async ({ data, fetch }) => {
-	const fetchExtensions = async () => {
-		const res = await fetch("http://localhost:8000/api/extensions");
-		const extensions = res.json();
-		return extensions;
-	};
+	const res = await fetch(`${env.PUBLIC_API_URL}/extensions`);
+	const extensions = await res.json();
+
 	return {
-		extensions: fetchExtensions,
+		extensions: extensions,
 	};
 };

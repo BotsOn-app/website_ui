@@ -4,7 +4,7 @@
 	import Text from "$lib/components/utils/Text.svelte";
 
 	export let data;
-	const { extension } = data;
+	const { extensions } = data;
 </script>
 
 <section>
@@ -23,9 +23,9 @@
 				alt="Trophy icon, standing for the trends" />
 			<Text class="text-5xl font-bold">Trends :</Text>
 		</div>
-		{#if extension != undefined}
+		{#if extensions !== undefined}
 			<Grid>
-				{#each extension as e}
+				{#each extensions as e}
 					<Card
 						name={e.data.name}
 						description={e.data.description}
@@ -49,9 +49,9 @@
 			<Text class="text-5xl font-bold">All Extensions :</Text>
 		</div>
 
-		{#if extension != undefined}
+		{#if extensions !== undefined}
 			<Grid>
-				{#each extension as e}
+				{#each extensions as e}
 					<Card
 						name={e.data.name}
 						description={e.data.description}
