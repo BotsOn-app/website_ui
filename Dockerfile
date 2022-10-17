@@ -18,8 +18,8 @@ COPY --from=0 /app/package*.json ./
 
 RUN npm ci
 
-COPY --from=0 /app/build ./
+COPY --from=0 /app/build ./build
 
 EXPOSE 3000
 
-CMD ["node", "./index.js"]
+CMD ["node", "./build"]
