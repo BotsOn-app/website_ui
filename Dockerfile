@@ -1,25 +1,22 @@
-FROM node:18.8.0-alpine
+FROM node:18.8.0-alpine AS build
 
 WORKDIR /app
 
-COPY . .
+COPY package.json package-lock.json ./
 
 RUN npm ci
+
+COPY . .
 
 RUN npm run build
 
 
-# stage run
 FROM node:18.8.0-alpine
 
 WORKDIR /app
 
-COPY --from=0 /app/package*.json ./
-
-RUN npm ci
-
-COPY --from=0 /app/build ./build
+COPY --from=build /app/build .
 
 EXPOSE 3000
 
-CMD ["node", "./build"]
+CMD ["node", "./app.js"]
