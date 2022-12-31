@@ -1,30 +1,22 @@
-FROM node:16-alpine
+FROM node:18.8.0-alpine AS build
 
 WORKDIR /app
 
-COPY . .
+COPY package.json package-lock.json ./
 
 RUN npm ci
 
-RUN npm audit fix
+COPY . .
 
 RUN npm run build
 
 
-# stage run
-FROM node:16-alpine
+FROM node:18.8.0-alpine
 
 WORKDIR /app
 
-COPY --from=0 /app/package*.json ./
-
-RUN npm ci --production --ignore-scripts
-
-
-RUN npm audit fix
-
-COPY --from=0 /app/build ./
+COPY --from=build /app/build .
 
 EXPOSE 3000
 
-CMD ["node", "./index.js"]
+CMD ["node", "./app.js"]
