@@ -1,38 +1,36 @@
-# create-svelte
+# botson_website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-## Creating a project
+## Introduction
 
-If you're seeing this, you've probably already done this step. Congrats!
+This project is the main website of BotsOn, where you can download the core app (you can find it [here](https://github.com/BotsOn-app/Desktop))
+
+## Requirements
+
+To contribute to this project, you must have [Node](https://nodejs.org/en/) and by this [NPM](https://www.npmjs.com/) installed.
+
+## Installation
+
+Follow those steps to contribute to the project.
+First of all, you need to fork and clone the project.
+Then, you just have to run these commands :
 
 ```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+cd yourdirectory
 npm run dev -- --open
 ```
 
-## Building
+### Endpoints
 
-To create a production version of your app:
+project/  
+├── downloads/  
+│ ├── linux/  
+│ ├── windows/  
+│ └── macos/  
+├── extensions/  
+└── docs/
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The /api/ endpoint is not listed here because it is part of another project present in our github organization.
